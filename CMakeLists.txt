@@ -8,7 +8,7 @@ else()
   set(PATCH_NUM 0)
 endif()
 
-project(async 
+project(bulkserver 
     LANGUAGES CXX
     VERSION 0.0.${PATCH_NUM}
 )

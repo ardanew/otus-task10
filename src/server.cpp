@@ -97,16 +97,17 @@ void Server::onRecv(boost::system::error_code ec, size_t len, shared_ptr<boost::
 {
 	if (ec)
 	{
-		//cerr << "onRecv: " << ec.what() << endl;
+		if (m_clients.size() == 1)
+		{
+			unique_ptr<ClientData>& cd = m_clients.begin()->second;
+			cd->cmdProcessor->eof();
+		}
+
 		if (auto it = m_clients.find(socket->remote_endpoint()); it != m_clients.end())
 		{
-			unique_ptr<ClientData>& cd = it->second;
-			// тут можно не делать cd->cmdProcessor->eof(); при отключении
-			// если клиент был в limited состоянии (когда ограничены команды размером bulk_size) то эти команды сохранятся
-			// если был в unlimited состоянии (когда в фигурных скобках) - то по условиям задания их и не надо выводить
+			m_clients.erase(socket->remote_endpoint());
 			bs::error_code ec;
-			cd->socket->close(ec);
-			m_clients.erase(it);
+			socket->close(ec);
 		}
 		return;
 	}

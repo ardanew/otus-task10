@@ -289,3 +289,60 @@ TEST_F(TestServer, OneClientUnLimitedStateTask1) // test1 from readme
 	for (int i = 0; i < 10; i++)
 		EXPECT_NE(string::npos, textFromLogFiles.find(to_string(i)));
 }
+
+
+TEST_F(TestServer, TestClientDisconnect)
+{
+	const size_t BULK_SIZE = 3;
+	{
+		auto stdOutput = make_shared<StdOutput>();
+		auto logOutput = make_shared<LogOutput>();
+		auto clientDataFactory = make_unique<ClientDataFactory>();
+		clientDataFactory->addOutput(stdOutput);
+		clientDataFactory->addOutput(logOutput);
+		clientDataFactory->init(BULK_SIZE);
+		this->setClientDataFactory(std::move(clientDataFactory));
+	}
+
+	this->start();
+
+	boost::asio::io_context context;
+	//auto s = make_shared<boost::asio::ip::tcp::socket>(context);
+	auto client = make_shared<boost::asio::ip::tcp::socket>(context);
+	boost::asio::ip::tcp::endpoint ep{ boost::asio::ip::address_v4::loopback(), 5555 };
+
+	bool stop = false;
+	std::thread t([&] {
+		while(!stop)
+			context.run();
+	});
+
+	boost::system::error_code connect_err;
+	for (int i = 0; i < 5; i++)
+	{
+		client->connect(ep, connect_err);
+		if (!connect_err)
+			break; // connected
+		this_thread::sleep_for(10ms); // retry
+	}
+	EXPECT_FALSE(connect_err);
+	this_thread::sleep_for(100ms);
+
+	auto& clientData = m_clients.begin()->second;
+
+	testing::internal::CaptureStdout();
+
+	std::string tail;
+	tail = this->parseInputString("0\n1\n", "", clientData->cmdProcessor.get());
+
+	client->close(connect_err);
+	EXPECT_FALSE(connect_err);
+	this_thread::sleep_for(100ms);
+
+	std::string outStr = testing::internal::GetCapturedStdout();
+	EXPECT_EQ("bulk: 0, 1\n", outStr);
+
+	this->stop();
+	stop = true;
+	t.join();
+}

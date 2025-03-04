@@ -1,4 +1,4 @@
-set(TARGET_NAME bulk_tests)
+set(TARGET_NAME bulkserver_tests)
 add_executable(${TARGET_NAME})
 
 set(TESTS_SERVER_SOURCES ${SERVER_SOURCES})
@@ -29,7 +29,7 @@ if(MSVC) # for vs debugging
     )
 endif()
 
-add_test(AsyncTest "${CMAKE_INSTALL_PREFIX}/tests/async-tests")
+add_test(BulkServerTest "${CMAKE_INSTALL_PREFIX}/tests/bulk_server_tests")
 
 include(GNUInstallDirs)
 install(

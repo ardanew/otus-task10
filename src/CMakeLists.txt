@@ -1,4 +1,4 @@
-set(TARGET_NAME bulk_server)
+set(TARGET_NAME bulkserver)
 
 set(SERVER_SOURCES 
     builder.h builder.cpp
