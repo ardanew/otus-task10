@@ -1,0 +1,7 @@
+<map id="IOutput" name="IOutput">
+<area shape="rect" id="Node000001" title="Interface for outputs." alt="" coords="86,5,178,92"/>
+<area shape="rect" id="Node000002" href="$class_log_output.html" title="Outputs commands batch to a log file." alt="" coords="5,140,125,389"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,107,106,141,101,139,112,105"/>
+<area shape="rect" id="Node000003" href="$class_std_output.html" title="Outputs a batch to the console." alt="" coords="150,160,248,369"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,105,169,160,164,162,147,107"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$struct_i_output.html" title="Interface for outputs." alt="" coords="5,31,70,56"/>
+<area shape="rect" id="Node000001" href="$class_log_output.html" title="Outputs commands batch to a log file." alt="" coords="118,5,200,31"/>
+<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="84,31,117,24,118,29,86,36"/>
+<area shape="rect" id="Node000002" href="$class_std_output.html" title="Outputs a batch to the console." alt="" coords="119,55,199,80"/>
+<area shape="poly" id="edge5_Node000000_Node000002" title=" " alt="" coords="85,50,119,57,117,62,84,55"/>
+</map>

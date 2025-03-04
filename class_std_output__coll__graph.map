@@ -1,0 +1,15 @@
+<map id="StdOutput" name="StdOutput">
+<area shape="rect" id="Node000001" title="Outputs a batch to the console." alt="" coords="231,155,329,282"/>
+<area shape="rect" id="Node000002" href="$struct_i_output.html" title="Interface for outputs." alt="" coords="5,5,98,92"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,93,160,129,233,181,230,185,157,133,109,97"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="122,16,168,82"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,81,162,106,174,130,195,154,219,175,215,179,191,158,170,132,157,108,149,82"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="194,16,240,82"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="231,81,248,130,251,138,246,140,243,132,226,83"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="264,16,378,82"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="316,82,302,139,297,138,311,81"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="403,8,605,89"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="453,91,344,173,341,169,450,87"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="629,16,664,82"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="631,81,619,94,552,137,479,169,408,192,346,208,345,203,406,187,477,164,549,132,615,90,627,78"/>
+</map>

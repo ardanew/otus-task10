@@ -1,0 +1,21 @@
+<map id="src/stdoutput.h" name="src/stdoutput.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="193,5,300,31"/>
+<area shape="rect" id="Node000002" href="$ioutput_8h.html" title=" " alt="" coords="84,79,154,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,34,155,73,153,69,224,29"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="178,79,236,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="243,33,223,67,219,64,238,30"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="260,79,316,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="256,30,276,64,271,67,251,33"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="340,79,466,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="274,29,364,70,361,75,272,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,62,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="106,107,61,145,58,141,103,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="85,153,152,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="122,105,122,137,116,137,116,105"/>
+<area shape="rect" id="Node000005" href="$command_8h.html" title=" " alt="" coords="176,153,264,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="138,103,192,141,189,145,134,107"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="155,226,208,252"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="216,180,198,214,193,211,211,177"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="232,226,286,252"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="229,177,247,211,243,214,224,180"/>
+</map>

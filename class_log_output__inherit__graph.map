@@ -1,0 +1,5 @@
+<map id="LogOutput" name="LogOutput">
+<area shape="rect" id="Node000001" title="Outputs commands batch to a log file." alt="" coords="5,140,125,389"/>
+<area shape="rect" id="Node000002" href="$struct_i_output.html" title="Interface for outputs." alt="" coords="19,5,112,92"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,107,68,140,63,140,63,107"/>
+</map>
