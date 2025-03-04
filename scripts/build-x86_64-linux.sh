@@ -23,6 +23,7 @@ cmake -S ${PACKAGE_ROOT_DIR} -B "${CMAKE_BINARY_DIR}" \
             -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX} \
             -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE} \
             -DPLATFORM_BUILD_DIR=$PLATFORM_BUILD_DIR \
+            -DHW3_SCRIPTS_CMAKE_DIR=$HW3_SCRIPTS_CMAKE_DIR -DLIBDIR=$LIBDIR\
             -DGENERATE_DEB=ON \
             -G "Unix Makefiles"
     result=$?
@@ -30,8 +31,6 @@ cmake -S ${PACKAGE_ROOT_DIR} -B "${CMAKE_BINARY_DIR}" \
         echo "CMake installation stage failed (error: ${result})"
         exit 3
     fi
-    
-#--             -DHW3_SCRIPTS_CMAKE_DIR=$HW3_SCRIPTS_CMAKE_DIR -DLIBDIR=$LIBDIR\
 
 cmake --build "${CMAKE_BINARY_DIR}" --config "${CMAKE_BUILD_TYPE}" -j $(nproc)
     result=$?
